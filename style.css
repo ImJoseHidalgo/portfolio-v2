@@ -88,6 +88,27 @@ main .section-two .card-profile ul li img {
   filter: opacity(0.6);
 }
 
+/* CARD DESCRIPTION */
+main .section-two .card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .section-two .card-description .about .text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+main .section-two .card-description .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+main .section-two .card-description .skills .list {
+  border: 1px solid red;
+}
+
 @media only screen and (max-width: 600px) {
   /* SECTION ONE */
   main .section-one .box {
