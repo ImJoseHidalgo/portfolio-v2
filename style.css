@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background: #edecec;
+}
+main .first-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .first-section .box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  background: #edecec;
+  box-shadow: 10px 10px 50px #c9c9c9, -20px -20px 60px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .first-section .box::before {
+  content: "JH";
+  font-size: 70px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+main .first-section h1 {
+  letter-spacing: 2px;
+  font-size: 34px;
+  margin-top: 60px;
+}
+main .first-section h2 {
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 10px;
+}
