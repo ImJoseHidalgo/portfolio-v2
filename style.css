@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
   color: #474747;
 }
 main {
@@ -45,16 +45,16 @@ main .section-one h2 {
 }
 /* Section Two */
 main .section-two {
+  height: 100vh;
   width: 90%;
   margin: auto;
-  padding: 140px 0;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 60px;
+  grid-gap: 30px;
 }
 main .section-two .card-profile {
   width: 350px;
-  margin: auto;
+  margin: auto 0;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -87,6 +87,9 @@ main .section-two .card-profile ul li img {
   margin-right: 10px;
   border-radius: 0;
   filter: opacity(0.6);
+}
+main .section-two .card-profile ul li a:hover img {
+  filter: opacity(1);
 }
 
 /* CARD DESCRIPTION */
@@ -138,12 +141,97 @@ main .section-two .card-description .skills .list span {
 main .section-two .card-description .skills .list .line {
   background: #949494;
   border-radius: 50px;
-  width: 16%;
+  width: 10%;
   height: 4px;
-  margin: 30px 0;
+  margin: 30px 0 50px;
 }
 main .section-two .card-description .skills .list p {
-  margin: 10px 0;
+  margin: 20px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+main .section-two .card-description .skills .list img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+  /* Section Two */
+  main .section-two {
+    grid-gap: 70px;
+  }
+  main .section-two .card-profile {
+    width: 330px;
+  }
+  /* CARD DESCRIPTION */
+  main .section-two .card-description .about .text {
+    grid-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Section Two */
+  main .section-two {
+    grid-gap: 50px;
+  }
+  main .section-two .card-profile {
+    width: 300px;
+    padding: 40px 0;
+  }
+  main .section-two .card-profile img {
+    width: 220px;
+  }
+  /* CARD DESCRIPTION */
+  main .section-two .card-description .about .title h2 {
+    font-size: 30px;
+    width: 240px;
+  }
+  main .section-two .card-description .about .text {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin: 0s 0 10px;
+  }
+  main .section-two .card-description .skills {
+    margin-top: 30px;
+  }
+  main .section-two .card-description .skills .list span {
+    font-size: 24px;
+  }
+  main .section-two .card-description .skills .list .line {
+    margin: 20px 0 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Section Two */
+  main .section-two {
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 80px;
+    padding: 50px 0;
+  }
+  main .section-two .card-profile {
+    width: 100%;
+    padding: 0 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main .section-two .card-profile img {
+    width: 240px;
+  }
+  main .section-two .card-profile ul li {
+    margin: 20px 0;
+  }
+  /* CARD DESCRIPTION */
+  main .section-two .card-description {
+    width: 90%;
+    margin: auto;
+  }
+  main .section-two .card-description .about .text {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -164,21 +252,41 @@ main .section-two .card-description .skills .list p {
   }
   /* Section Two */
   main .section-two {
-    width: 90%;
-    padding: 50px 0;
     grid-template-columns: 1fr;
     grid-gap: 60px;
   }
   main .section-two .card-profile {
-    width: 100%;
-  }
-  main .section-two .card-profile img {
-    width: 220px;
+    padding: 50px 0;
+    flex-direction: column;
   }
   main .section-two .card-profile ul {
-    padding: 20px 0;
+    padding: 30px 0;
   }
-  main .section-two .card-profile ul li {
-    margin: 30px 0;
+  /* CARD DESCRIPTION */
+  main .section-two .card-description .about .title h2 {
+    font-size: 20px;
+    width: 180px;
+  }
+  main .section-two .card-description .about .title .line {
+    height: 3px;
+  }
+  main .section-two .card-description .about .text {
+    grid-template-columns: 1fr;
+  }
+  main .section-two .card-description .about .text p {
+    font-size: 16px;
+  }
+  main .section-two .card-description .skills {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 10px;
+  }
+  main .section-two .card-description .skills .list .line {
+    margin: 15px 0 25px;
+    width: 30%;
+    height: 3px;
+  }
+  main .section-two .card-description .skills .list p {
+    font-size: 16px;
   }
 }
