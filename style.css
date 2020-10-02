@@ -91,6 +91,9 @@ main .section-two .card-profile ul li img {
 main .section-two .card-profile ul li a:hover img {
   filter: opacity(1);
 }
+main .section-two .card-profile ul li a:hover {
+  color: #000;
+}
 
 /* CARD DESCRIPTION */
 main .section-two .card-description {
@@ -159,6 +162,8 @@ main .section-two .card-description .skills .list img {
 @media only screen and (max-width: 1440px) {
   /* Section Two */
   main .section-two {
+    height: 100%;
+    padding: 100px 0;
     grid-gap: 70px;
   }
   main .section-two .card-profile {
