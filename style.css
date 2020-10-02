@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  color: #474747;
 }
 main {
   background: #edecec;
@@ -52,7 +53,7 @@ main .section-two {
   grid-gap: 60px;
 }
 main .section-two .card-profile {
-  width: 90%;
+  width: 350px;
   margin: auto;
   padding: 50px 0;
   display: flex;
@@ -95,18 +96,54 @@ main .section-two .card-description {
   justify-content: center;
   align-items: center;
 }
+main .section-two .card-description .about .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .section-two .card-description .about .title h2 {
+  font-size: 36px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  width: 220px;
+}
+main .section-two .card-description .about .title .line {
+  background: #949494;
+  border-radius: 50px;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 20px;
+}
 main .section-two .card-description .about .text {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
+  margin: 10px 0 30px;
+}
+main .section-two .card-description .about .text p {
+  font-size: 18px;
 }
 main .section-two .card-description .skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
   width: 100%;
+  margin-top: 50px;
 }
-main .section-two .card-description .skills .list {
-  border: 1px solid red;
+main .section-two .card-description .skills .list span {
+  font-size: 26px;
+  letter-spacing: 1px;
+  position: relative;
+}
+main .section-two .card-description .skills .list .line {
+  background: #949494;
+  border-radius: 50px;
+  width: 16%;
+  height: 4px;
+  margin: 30px 0;
+}
+main .section-two .card-description .skills .list p {
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 600px) {
