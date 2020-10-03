@@ -4,6 +4,13 @@
   font-family: "Helvetica", sans-serif;
   color: #474747;
 }
+h1:hover,
+h2:hover,
+p:hover,
+span:hover {
+  color: #000;
+  transition: 0.3s;
+}
 main {
   background: #edecec;
 }
@@ -31,6 +38,10 @@ main .section-one .box::before {
   font-size: 90px;
   letter-spacing: 2px;
   font-weight: 700;
+  transition: 0.3s;
+}
+main .section-one .box:hover:before {
+  color: #000;
 }
 main .section-one h1 {
   letter-spacing: 2px;
@@ -242,18 +253,18 @@ main .section-two .card-description .skills .list img {
 @media only screen and (max-width: 600px) {
   /* SECTION ONE */
   main .section-one .box {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
   main .section-one .box::before {
-    font-size: 80px;
+    font-size: 60px;
   }
   main .section-one h1 {
-    font-size: 45px;
+    font-size: 36px;
     margin-top: 50px;
   }
   main .section-one h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   /* Section Two */
   main .section-two {
