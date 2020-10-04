@@ -65,7 +65,7 @@ main .section-two {
 }
 main .section-two .card-profile {
   width: 350px;
-  margin: auto 0;
+  margin: auto;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -89,6 +89,7 @@ main .section-two .card-profile ul li {
 }
 main .section-two .card-profile ul li a {
   display: flex;
+  align-items: center;
   text-decoration: none;
   font-size: 18px;
   color: #474747;
@@ -170,11 +171,62 @@ main .section-two .card-description .skills .list img {
   margin-right: 10px;
 }
 
+/* SECTION THREE*/
+main .section-three {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 50px;
+  align-items: center;
+}
+main .section-three .title {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main .section-three .title .line {
+  width: 20%;
+  height: 3px;
+  background: #949494;
+  margin: 14px 0 20px;
+}
+main .section-three .title h3 {
+  font-size: 22px;
+}
+main .section-three .portfolio {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  text-align: center;
+}
+main .section-three .portfolio .card {
+  border-radius: 8px;
+  background: #edecec;
+  box-shadow: 10px 10px 30px #c9c9c9, -10px -10px 30px 5px #fff,
+    inset 10px 10px 50px rgba(0, 0, 0, 0.02);
+}
+main .section-three .portfolio .card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+main .section-three .portfolio .card h5 {
+  font-size: 16px;
+  margin: 10px;
+}
+main .section-three .portfolio .card p {
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 1440px) {
   /* Section Two */
   main .section-two {
-    height: 100%;
-    padding: 100px 0;
+    height: 100vh;
+    padding: 0;
     grid-gap: 70px;
   }
   main .section-two .card-profile {
@@ -189,6 +241,8 @@ main .section-two .card-description .skills .list img {
 @media only screen and (max-width: 1024px) {
   /* Section Two */
   main .section-two {
+    height: 100%;
+    padding: 100px 0;
     grid-gap: 50px;
   }
   main .section-two .card-profile {
@@ -228,7 +282,7 @@ main .section-two .card-description .skills .list img {
     padding: 50px 0;
   }
   main .section-two .card-profile {
-    width: 100%;
+    width: 90%;
     padding: 0 0;
     flex-direction: row;
     justify-content: space-around;
@@ -275,8 +329,14 @@ main .section-two .card-description .skills .list img {
     padding: 50px 0;
     flex-direction: column;
   }
+  main .section-two .card-profile img {
+    width: 200px;
+  }
   main .section-two .card-profile ul {
-    padding: 30px 0;
+    padding: 20px 0 0;
+  }
+  main .section-two .card-profile ul li a {
+    font-size: 16px;
   }
   /* CARD DESCRIPTION */
   main .section-two .card-description .about .title h2 {
@@ -304,5 +364,21 @@ main .section-two .card-description .skills .list img {
   }
   main .section-two .card-description .skills .list p {
     font-size: 16px;
+  }
+
+  /* SECTION THREE*/
+  main .section-three {
+    width: 80%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+  }
+  main .section-three .title {
+    height: 100%;
+    justify-content: center;
+  }
+  main .section-three .portfolio {
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
