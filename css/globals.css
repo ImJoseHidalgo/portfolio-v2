@@ -4,12 +4,18 @@
   font-family: "Helvetica", sans-serif;
   color: #474747;
 }
+html {
+  scroll-behavior: smooth;
+}
 h1:hover,
 h2:hover,
 p:hover,
 span:hover {
   color: #000;
   transition: 0.3s;
+}
+li {
+  list-style: none;
 }
 a {
   text-decoration: none;

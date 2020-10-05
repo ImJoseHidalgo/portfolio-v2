@@ -53,6 +53,7 @@ main .section-two {
 }
 main .section-two img {
   width: 80%;
+  margin: auto;
 }
 main .section-two .container {
   display: flex;

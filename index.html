@@ -5,10 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jose Hidalgo | Frontend Developer</title>
     <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/icons/jh.png" />
   </head>
   <body>
+    <!-- Menu Container start -->
+    <div class="menu">
+      <div class="menu-background"></div>
+      <div class="menu-container">
+        <div class="contact">
+          <div class="menu-items">
+            <li><a href="#portfolio">. Portfolio</a></li>
+            <li><a href="./blog/index.html">. Blog</a></li>
+            <li><a href="#about">. About</a></li>
+            <li><a href="#contact">. Contact</a></li>
+          </div>
+          <div class="contact-desc">
+            <p>
+              If you would like to communicate with me or are interested in
+              starting a project together, get in touch.
+            </p>
+            <a href="mailto:josehidalgo990@gmail.com">Mail</a>
+            <p class="mobile">Or send me a direct message</p>
+            <div class="social-container">
+              <div class="icon">
+                <a target="_blank" href="https://twitter.com/imjosehidalgo"
+                  ><img src="./img/icons/twitter.svg" alt="Twitter"
+                /></a>
+              </div>
+              <div class="icon">
+                <a target="_blank" href="https://linkedin.com/in/imjosehidalgo"
+                  ><img src="./img/icons/linkedin.svg" alt="Linkedin"
+                /></a>
+              </div>
+              <div class="icon">
+                <a target="_blank" href="https://github.com/imjosehidalgo"
+                  ><img src="./img/icons/github.svg" alt="GitHub"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Menu Container end -->
+    <div class="main-container">
+      <header class="header">
+        <div class="header-container">
+          <div class="logo">
+            <a href="./">J H</a>
+            <!-- <a href="./"><img src="images/icons/jhB.png" alt="Logo" /></a> -->
+          </div>
+          <div class="languages">
+            <a href="#">EN</a>
+            <a href="./es/index.html">ES</a>
+          </div>
+        </div>
+      </header>
+      <div class="bottom"></div>
+      <div class="right">
+        <div class="social-container">
+          <div class="icon">
+            <a target="_blank" href="https://twitter.com/imjosehidalgo"
+              ><img src="./img/icons/twitter.svg" alt="Twitter"
+            /></a>
+          </div>
+          <div class="icon">
+            <a target="_blank" href="https://linkedin.com/in/imjosehidalgo"
+              ><img src="./img/icons/linkedin.svg" alt="Linkedin"
+            /></a>
+          </div>
+          <div class="icon">
+            <a target="_blank" href="https://github.com/imjosehidalgo"
+              ><img src="./img/icons/github.svg" alt="GitHub"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="left"></div>
+
+      <div class="menu-button">
+        <div class="button"></div>
+        <p>MENU</p>
+      </div>
+    </div>
     <main>
       <div class="section-one">
         <div class="box"></div>
@@ -108,5 +191,8 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/intersectionObserver.js"></script>
   </body>
 </html>

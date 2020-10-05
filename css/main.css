@@ -1,0 +1,468 @@
+.main::after,
+.main:before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 50%;
+  height: 100vh;
+  top: 0;
+  transition: 1s;
+}
+.main::after {
+  left: 0;
+  background-image: radial-gradient(
+    circle at right,
+    #f8f8f8,
+    rgb(235, 235, 235)
+  );
+}
+.main::before {
+  right: 0;
+  background-image: radial-gradient(circle at left, #2c3541, #0e1319);
+}
+.main.active::after {
+  width: 80%;
+}
+.main.active::before {
+  width: 20%;
+}
+
+.sect-1,
+.sect-2,
+.sect-3,
+.sect-4 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.sect-3 {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sect-4 {
+  background: #0e1319;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture {
+  position: fixed;
+  z-index: 0;
+  right: calc(50% - 300px);
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: 1s;
+}
+.picture img {
+  width: 600px;
+}
+.main.active .picture {
+  right: calc(20% - 300px);
+}
+/* Name Container */
+.sect-1 .name-container {
+  position: fixed;
+  z-index: 2;
+  bottom: 5%;
+  left: 3%;
+}
+.sect-1 .name-container .name {
+  font-weight: 700;
+  font-size: 28px;
+}
+.sect-1 .name-container .name,
+.sect-1 .name-container .prof,
+.sect-1 .portf-container .name {
+  text-transform: uppercase;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: 0.3s 0.5s;
+}
+.main.active .sect-1 .name-container .name,
+.main.active .sect-1 .name-container .prof,
+.main.active .sect-1 .portf-container .name {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+.sect-1 .portf-container {
+  position: fixed;
+  z-index: 2;
+  bottom: 5%;
+  right: 3%;
+  cursor: pointer;
+}
+.sect-1 .portf-container a {
+  font-weight: 700;
+  font-size: 28px;
+  color: #dadada;
+}
+.sect-1 .portf-container img {
+  width: 20px;
+}
+/* Landing Description */
+.description {
+  position: fixed;
+  z-index: 0;
+  top: 40%;
+  left: 22%;
+  width: 50%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+.description h2 {
+  width: 60%;
+  margin: 30px 0;
+  font-size: 28px;
+  font-weight: 900;
+  transition: 0.5s 0s;
+  transform: scaleY(0);
+  transform-origin: left;
+}
+.description h2 strong {
+  font-weight: 700;
+  color: #222933;
+}
+.main.active .description h2 {
+  transform: scaleY(1);
+  transition: 0.3s 0.6s;
+  transform-origin: left;
+}
+
+/* Skills Section */
+.skills {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.skills-container {
+  width: 70%;
+}
+.skills-container .about h3,
+.skills-container .skills-list h3 {
+  margin: 15px 0;
+  opacity: 0;
+  transition: 0.5s 0.3s;
+}
+.skills-container .skills-list h3 {
+  transition: 0.5s 0.6s;
+}
+.about,
+.skills-list {
+  width: 70%;
+}
+.about p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 10px 0;
+  opacity: 0;
+  transition: 0.5s 0.4s;
+}
+.skills.active .skills-container h3,
+.skills.active .about p {
+  opacity: 1;
+}
+.skills-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.list p {
+  font-size: 20px;
+  margin: 10px 0;
+  opacity: 0;
+  transition: 0.5s 0.6s;
+}
+.list-item {
+  display: flex;
+  margin: 0;
+  opacity: 0;
+  transition: 0.5s 0.7s;
+}
+/* .list-item p {
+  margin: 0 0 10px 0;
+} */
+.list-item img {
+  width: 20px;
+  padding-right: 10px;
+}
+.skills.active .list p,
+.skills.active .list-item {
+  opacity: 1;
+}
+
+.main.active-2 .description h2 {
+  transform: scaleY(0);
+  transition: 0.3s 0s;
+}
+
+/* Section 3 Portfolio */
+.portfolio-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.portfolio-container a {
+  font-weight: 600;
+  color: #2c3541;
+  border-bottom: 1px solid #2c3541;
+}
+.portfolio-container a:hover {
+  color: #0e1319;
+  border-bottom: 2px solid #0e1319;
+}
+.portfolio-previews {
+  margin: 10px 0;
+}
+.preview {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+}
+.preview img {
+  width: 350px;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.preview-description {
+  margin-left: 50px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.preview-description h4 {
+  padding-bottom: 10px;
+}
+.preview-links {
+  margin-top: 20px;
+}
+.preview-links a {
+  background: #2c3541;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+.preview-links a:hover {
+  background: #0e1319;
+  color: #fff;
+}
+
+/* Section 4 Footer Contact */
+.contact-footer-container {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-left h3 {
+  width: 70%;
+  color: #fff;
+  font-size: 34px;
+}
+.contact-right p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.contact-right .x {
+  margin-top: 10px;
+}
+.contact-right a {
+  color: #2c3541;
+}
+.contact-right a:hover {
+  color: #fff;
+}
+.contact-footer-social {
+  display: flex;
+}
+.icon-footer {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  background: #dadada;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-footer img {
+  margin-top: 2px;
+  width: 14px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main::after,
+  .main:before {
+    width: 80%;
+  }
+  .main.active::after {
+    width: 100%;
+  }
+  .main.active::before {
+    width: 0%;
+  }
+  .picture {
+    left: calc(80% - 230px);
+  }
+  .picture img {
+    width: 500px;
+  }
+  .main.active .picture {
+    left: calc(100% - 220px);
+  }
+  /* Name Container */
+  .sect-1 .name-container {
+    top: 15%;
+    left: 10%;
+    opacity: 1;
+    transition: 0.3s 0.2s;
+  }
+  .sect-1 .name-container .name {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .sect-1 .name-container .prof {
+    font-size: 14px;
+  }
+  .sect-1 .portf-container {
+    bottom: 55%;
+    left: -70%;
+    opacity: 1;
+    transition: 0.3s 0.2s;
+    transform: rotate(-90deg);
+  }
+  .sect-1 .name-container.active,
+  .sect-1 .portf-container.active {
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .sect-1 .portf-container a {
+    font-size: 22px;
+    color: #222933;
+  }
+  .sect-1 .portf-container img {
+    background: #222933;
+    border-radius: 50%;
+    padding: 5px;
+    width: 12px;
+    margin: 0 0 -3px 0;
+    transform: rotate(180deg);
+  }
+  /* Landing Description */
+  .description {
+    top: 30%;
+    left: 10%;
+    width: 70%;
+  }
+  .description h2 {
+    width: 100%;
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .description h2 strong {
+    font-weight: 600;
+  }
+  /* Skills Section */
+  .skills-container {
+    width: 80%;
+  }
+  .about,
+  .skills-list {
+    width: 100%;
+  }
+  .skills-container .about h3,
+  .skills-container .skills-list h3 {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+  .about p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .list p {
+    font-size: 12px;
+  }
+  .list-item img {
+    width: 14px;
+    padding-right: 5px;
+  }
+  .main.active-2 .picture {
+    left: calc(100% + 100px);
+  }
+  /* Section 3 Portfolio */
+  .sect-3 {
+    background: #f8f8f8;
+    height: auto;
+  }
+  .portfolio-container {
+    width: 90%;
+    padding: 50px 0;
+  }
+  .portfolio-container a {
+    font-weight: 600;
+    color: #2c3541;
+  }
+  .portfolio-previews {
+    margin: 20px 0;
+  }
+  .preview {
+    width: 100%;
+    margin: 20px auto;
+    flex-direction: column;
+  }
+  .preview img {
+    width: 90%;
+    margin: auto;
+  }
+  .preview-description {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .preview-description h4 {
+    padding-bottom: 10px;
+  }
+  .preview-description p {
+    font-size: 12px;
+  }
+  .preview-links a {
+    color: #fff;
+  }
+
+  /* Section 4 Footer Contact */
+  .sect-4 {
+    height: 70vh;
+  }
+  .contact-footer-container {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  .contact-left h3 {
+    font-size: 28px;
+    width: 100%;
+  }
+  .contact-left {
+    margin-bottom: 20px;
+  }
+  .contact-right p {
+    font-size: 12px;
+  }
+  .contact-right a {
+    font-size: 13px;
+  }
+}
