@@ -11,8 +11,7 @@ main .section-one .box {
   height: 240px;
   border-radius: 35px;
   background: #edecec;
-  box-shadow: 10px 10px 30px #c9c9c9, -10px -10px 30px 5px #fff,
-    inset 10px 10px 50px rgba(0, 0, 0, 0.02);
+  box-shadow: 10px 10px 30px #c9c9c9, -10px -10px 30px 5px #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +23,7 @@ main .section-one .box::before {
   font-weight: 700;
   transition: 0.3s;
 }
-main .section-one .box:hover:before {
+main .section-one .box:hover::before {
   color: #000;
 }
 main .section-one h1 {
@@ -88,7 +87,7 @@ main .section-two .container a:hover {
 
 /* SECTION THREE */
 main .section-three {
-  padding: 70px 0;
+  padding: 135px 0;
   width: 90%;
   margin: auto;
   display: grid;
@@ -97,6 +96,8 @@ main .section-three {
   align-items: center;
 }
 main .section-three .title {
+  width: 90%;
+  margin: auto;
   height: 45%;
   display: flex;
   flex-direction: column;
@@ -124,23 +125,130 @@ main .section-three .portfolio {
   text-align: center;
 }
 main .section-three .portfolio .card {
-  border-radius: 8px;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.3s;
   background: #edecec;
-  box-shadow: 10px 10px 30px #c9c9c9, -10px -10px 30px 1px #fff,
-    inset 10px 10px 50px rgba(0, 0, 0, 0.02);
+  box-shadow: 10px 10px 30px #c9c9c9, -10px -10px 30px 1px #fff;
+  position: relative;
+}
+main .section-three .portfolio .card::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  bottom: 7px;
+  right: 7px;
+  background: #edecec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  opacity: 0;
+  transition: 0.3s 0s;
+}
+main .section-three .portfolio a:nth-child(1) .card::after {
+  content: "PORTFOLIO";
+}
+main .section-three .portfolio a:nth-child(2) .card::after {
+  content: "PIENSENGRANDE";
+}
+main .section-three .portfolio a:nth-child(3) .card::after {
+  content: "INSTAGRAM";
+}
+main .section-three .portfolio a:nth-child(4) .card::after {
+  content: "INSTAGRAM CLONE";
+}
+main .section-three .portfolio .card:hover::after {
+  opacity: 1;
+  transition: 0.3s 0.3s;
 }
 main .section-three .portfolio .card img {
-  border-radius: 5px 5px 0 0;
+  border-radius: 14px;
   width: 100%;
+  opacity: 1;
+  transition: 0.3s;
+}
+main .section-three .portfolio .card:hover img,
+main .section-three .portfolio .card:hover h5,
+main .section-three .portfolio .card:hover p {
+  opacity: 0;
 }
 main .section-three .portfolio .card h5 {
-  font-size: 16px;
+  display: none;
   margin: 10px;
+  font-size: 16px;
+  transition: 0.3s;
 }
 main .section-three .portfolio .card p {
-  margin-bottom: 20px;
+  display: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
-
+/* FOOTER */
+.contact-footer-container {
+  width: 60%;
+  margin: auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-left h3 {
+  width: 70%;
+  font-size: 34px;
+}
+.contact-right p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+.contact-right .x {
+  margin-top: 10px;
+}
+.contact-right a {
+  border-bottom: 2px solid #949494;
+}
+.contact-footer-social {
+  display: flex;
+}
+.icon-footer {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-footer a {
+  border-bottom: 0;
+}
+.icon-footer img {
+  margin-top: 2px;
+  width: 20px;
+  padding: 10px;
+}
+footer .menu-footer {
+  width: 60%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .menu-footer a {
+  color: #000;
+  font-weight: 600;
+}
+footer .menu-footer ul {
+  display: flex;
+  list-style: none;
+}
+footer .menu-footer ul li {
+  margin-left: 20px;
+}
 @media only screen and (max-width: 1440px) {
 }
 
@@ -152,11 +260,25 @@ main .section-three .portfolio .card p {
   }
   /* SECTION THREE */
   main .section-three {
+    grid-template-columns: 1fr;
     height: 100%;
     padding: 100px 0;
   }
+  main .section-three .title {
+    height: 100%;
+  }
+  main .section-three .title .line {
+    width: 10%;
+  }
   main .section-three .portfolio {
     width: 100%;
+  }
+  main .section-three .portfolio .card img {
+    border-radius: 14px 14spx 5px 5px;
+  }
+  main .section-three .portfolio .card h5,
+  main .section-three .portfolio .card p {
+    display: block;
   }
 }
 
@@ -213,5 +335,12 @@ main .section-three .portfolio .card p {
   main .section-three .portfolio {
     width: 100%;
     grid-template-columns: 1fr;
+  }
+  main .section-three .portfolio .card {
+    border-radius: 16px;
+    padding: 6px;
+  }
+  main .section-three .portfolio .card img {
+    border-radius: 10px 10px 3px 3px;
   }
 }

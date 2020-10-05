@@ -133,8 +133,7 @@ main .section-two .card-description .skills .list img {
 @media only screen and (max-width: 1024px) {
   /* Section Two */
   main .section-two {
-    height: 100%;
-    padding: 100px 0;
+    height: 100vh;
     grid-gap: 50px;
   }
   main .section-two .card-profile {

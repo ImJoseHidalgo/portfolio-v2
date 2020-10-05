@@ -11,6 +11,9 @@ span:hover {
   color: #000;
   transition: 0.3s;
 }
-main {
+a {
+  text-decoration: none;
+}
+body {
   background: #edecec;
 }
